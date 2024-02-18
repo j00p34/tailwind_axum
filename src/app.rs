@@ -25,7 +25,7 @@ fn Home() -> impl IntoView {
     let (value, set_value) = create_signal(0);
     let element = create_node_ref::<Div>();
 
-    let is_visible = use_element_visibility(element.get().unwrap());
+    let is_visible = use_element_visibility(element);
 
     // thanks to https://tailwindcomponents.com/component/blue-buttons-example for the showcase layout
     view! {
